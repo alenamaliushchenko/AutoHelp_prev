@@ -1,20 +1,18 @@
 <header class="header" id="home">
   <div class="header-container container">
     <nav class="header-nav">
-      <a href="#home" class="header-logo">
-        <img class="header-logo-img" src="./img/AutoHelp_without_slogan.svg" alt="Site logo" width="40" height="40">
-        <span>AutoHelp</span>
-      </a>      
-
-
-      <!-- Бургер-меню -->
-      <button class="burger-menu" aria-label="Toggle menu">
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-      </button>
-
-      
+      <div class="logo-burger-mobile">
+        <a href="#home" class="header-logo">
+          <img class="header-logo-img" src="./img/AutoHelp_without_slogan.svg" alt="Site logo" width="40" height="40">
+          <span class="logo-name">AutoHelp</span>
+        </a> 
+        <!-- Бургер-меню -->
+        <button class="burger-menu" aria-label="Toggle menu">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>  
+      </div>   
 
       <ul class="header-list">
         <li class="header-item">
@@ -28,11 +26,6 @@
           </a>
         </li>
         <li class="header-item">
-          <a class="header-link" href="#works">
-          Наші роботи
-          </a>
-        </li>
-        <li class="header-item">
           <a class="header-link" href="#reviews">
           Відгуки
           </a>
@@ -43,12 +36,31 @@
           </a>
         </li>
       </ul>
+
+    <!-- Mobile menu -->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-btn js-close-menu">
+          <svg class="menu-btn-icon" width="32" height="32">
+            <use href="#close-menu-btn"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#about">Про нас</a>
+          </li>
+          <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#services">Наші послуги</a>
+          </li>
+          <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#reviews">Відгуки</a>
+          </li>
+          <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="#footer">Контакти</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
-
-
-
-
 
 </header>
       

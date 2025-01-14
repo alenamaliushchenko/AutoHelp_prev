@@ -48,6 +48,19 @@ setTimeout(() => {
 }, 3000); // 3 секунди затримки перед відображенням основного контенту
 
 
+// Відкриття меню при натисканні на бургер-меню
+document.querySelector('.burger-menu').addEventListener('click', function() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('active');
+});
+
+// Закриття меню при натисканні на кнопку закриття
+document.querySelector('.js-close-menu').addEventListener('click', function() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.remove('active');
+});
+
+
 
 
 
