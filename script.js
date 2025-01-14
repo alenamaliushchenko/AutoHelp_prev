@@ -33,7 +33,7 @@ const heroSection = document.querySelector('.hero-section');
 setTimeout(() => {
   // Приховуємо анімацію лоадера
   heroAnimation.style.opacity = '0'; // Анімація зникнення
-  heroAnimation.style.transition = 'opacity 2s ease';
+  heroAnimation.style.transition = 'opacity 0.5s ease';
 
  // Через 2 секунди (час анімації) ховаємо лоадер повністю
  setTimeout(() => {
