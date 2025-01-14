@@ -1,0 +1,74 @@
+.hero-section {
+  background-image: url("../img/converted_image.png");
+  display: block;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  
+  transition: opacity 4s ease, visibility 4s ease; /* Плавне з'явлення */
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Чорний напівпрозорий фон */
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-title {
+  position: absolute;
+  text-align: center;
+  font-size: 50px;
+  color: rgba(0, 255, 255, 1);
+  padding-left: 20px;
+  padding-top: 50px;
+
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.7), 
+  4px 4px 0 rgba(0, 0, 0, 0.5), 
+  6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.hero-title .accent {
+  font-size: 90px;
+}
+.hero-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 70px;
+  color: #000;
+  /* transform: translate(30%, 30%); */
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+  z-index: 2;
+}
+.hero-btn:hover {
+  background-color: rgba(0, 255, 255, 0.8); /* Яскравий фон */
+  color: #000; /* Контрастний текст */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 25px rgba(0, 255, 255, 0.5); /* Інтенсивніша тінь */
+  font-weight: 600;
+  transform: scale(1.2); /* Збільшення при наведенні */
+  border: 2px solid rgba(0, 255, 255, 1); /* Додати кольоровий контур */
+}
+
+/* 
+@media (max-width: 768px) {
+  .hero-section {
+    height: 50vh; 
+    background-image: linear-gradient(rgba(8, 251, 252, 0.1),
+    rgba(8, 251, 252, 0.1)), url("../img/a-black-car-with-a-red-tail-light-and-the-rims-of-the-wheel-are-visible_662214-561614.jpg");
+  
+}
+}  */
