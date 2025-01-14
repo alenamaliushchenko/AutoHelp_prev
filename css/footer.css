@@ -42,13 +42,13 @@ footer::before {
   font-size: 50px;
 
 }  
-/* .footer-slogan {
- 
 
-} */
 .footer-contact {
   display: flex;
   flex-direction: column;
   gap: 15px;
  
+}
+.location {
+  color: white;
 }

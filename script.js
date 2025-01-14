@@ -30,39 +30,52 @@ const heroSection = document.querySelector('.hero-section');
 
 
 // Додаємо затримку для анімації
-setTimeout(() => {
+// setTimeout(() => {
   // Приховуємо анімацію лоадера
-  heroAnimation.style.opacity = '0'; // Анімація зникнення
-  heroAnimation.style.transition = 'opacity 0.5s ease';
+  // heroAnimation.style.opacity = '0'; // Анімація зникнення
+  // heroAnimation.style.transition = 'opacity 0.5s ease';
 
  // Через 2 секунди (час анімації) ховаємо лоадер повністю
- setTimeout(() => {
-  heroAnimation.style.display = 'none'; // Прибираємо з DOM
-  heroSection.style.display = 'block'; // Відображаємо основний контент
-  document.body.style.overflow = 'auto'; // Включаємо прокрутку
+//  setTimeout(() => {
+  // heroAnimation.style.display = 'none'; // Прибираємо з DOM
+  // heroSection.style.display = 'block'; // Відображаємо основний контент
+  // document.body.style.overflow = 'auto'; // Включаємо прокрутку
 
-  setTimeout(() => {
-    heroSection.style.opacity = '1'; // Плавне з'явлення
-  }, 10); // Невелика затримка для плавного переходу
-}, 2000); // Час переходу opacity
-}, 3000); // 3 секунди затримки перед відображенням основного контенту
+  // setTimeout(() => {
+    // heroSection.style.opacity = '1'; // Плавне з'явлення
+  // }, 10); // Невелика затримка для плавного переходу
+// }, 2000); // Час переходу opacity
+// }, 3000); // 3 секунди затримки перед відображенням основного контенту
 
 
-// Відкриття меню при натисканні на бургер-меню
-document.querySelector('.burger-menu').addEventListener('click', function() {
-  const menu = document.getElementById('mobile-menu');
-  menu.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', () => {
+  // Пошук елементів
+  const burgerMenu = document.querySelector('.burger-menu');
+  const mobileMenu = document.querySelector('.js-menu-container');
+  const closeMenuBtn = document.querySelector('.js-close-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-menu-link');
+
+  // Функції відкриття/закриття меню
+  const openMenu = () => {
+    mobileMenu.classList.add('is-open');
+    document.body.style.overflow = 'hidden'; // Блокуємо прокручування
+  };
+
+  const closeMenu = () => {
+    mobileMenu.classList.remove('is-open');
+    document.body.style.overflow = ''; // Відновлюємо прокручування
+  };
+
+  // Додавання слухачів подій
+  if (burgerMenu) {
+    burgerMenu.addEventListener('click', openMenu);
+  }
+
+  if (closeMenuBtn) {
+    closeMenuBtn.addEventListener('click', closeMenu);
+  }
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', closeMenu); // Закриття меню при натисканні на лінки
+  });
 });
-
-// Закриття меню при натисканні на кнопку закриття
-document.querySelector('.js-close-menu').addEventListener('click', function() {
-  const menu = document.getElementById('mobile-menu');
-  menu.classList.remove('active');
-});
-
-
-
-
-
-
-
