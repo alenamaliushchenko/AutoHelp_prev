@@ -2,7 +2,7 @@
   position: relative;
   margin-top: -115px;
   z-index: 10;
-  height: 50vh;
+  /* height: 50vh; */
   background-color: rgba(21, 19, 19, 1);
   color: white;
   text-align: center;
@@ -13,42 +13,117 @@ footer::before {
   top: 50px; 
   left: 30px;
   right: 30px;
-  height: 0.5px; /* Товщина лінії */
+  height: 0.5px;
   background-color: rgba(0, 255, 255, 1); 
 }
 .footer-container {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   align-items: center;
   padding-top: 70px;
+  padding-bottom: 30px;
   padding-left: 15px; 
 }
-.footer-left-side {
+.footer-title-about {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 .footer-title {
-  /* position: absolute; */
   text-align: center;
   font-size: 30px;
   color: rgba(0, 255, 255, 1);
-  
-  
-/* 
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.7), 
-  4px 4px 0 rgba(0, 0, 0, 0.5), 
-  6px 6px 0 rgba(0, 0, 0, 0.3); */
 }
-.footer-title.accent {
-  font-size: 50px;
+.footer-subtitle {
+  font-size: 15px;
+}
 
-}  
-
+.footer-slogan {
+  font-size: 14px;
+}
 .footer-contact {
   display: flex;
   flex-direction: column;
   gap: 15px;
  
 }
+.footer-contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-phone {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.contact-phone svg {
+  margin-right: 8px; 
+}
+.icon-phone-call {
+  fill: white;
+}
+.footer-contact-item:hover,
+.footer-contact-item:focus {
+  color: rgba(0, 255, 255, 1); 
+}
+
+.footer-contact-item a:hover,
+.footer-contact-item a:focus {
+  color: rgba(0, 255, 255, 1);
+}
+
+.footer-contact-item svg {
+  transition: fill 0.3s ease; 
+}
+
+.footer-contact-item:hover svg,
+.footer-contact-item:focus svg {
+  fill: rgba(0, 255, 255, 1); 
+}
+
+
+
+
+.social-link {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.footer-social-icon {
+  fill: white;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  /* Tablet devices */
+
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+   /* Desktop devices */
+
+}
+
+/* 
+
+
+
+  
+
+
 .location {
   color: white;
-}
+} */

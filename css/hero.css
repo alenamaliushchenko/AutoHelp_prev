@@ -44,7 +44,10 @@
   bottom: 30px;
   right: 70px;
   color: #000;
-  /* transform: translate(30%, 30%); */
+  width: 120px;
+  height: 50px;
+  bottom: 50px;
+  right: 90px; 
   background-color: #fff;
   border: none;
   border-radius: 5px;
@@ -63,12 +66,148 @@
   border: 2px solid rgba(0, 255, 255, 1); /* Додати кольоровий контур */
 }
 
-/* 
+
 @media (max-width: 768px) {
   .hero-section {
     height: 50vh; 
-    background-image: linear-gradient(rgba(8, 251, 252, 0.1),
-    rgba(8, 251, 252, 0.1)), url("../img/a-black-car-with-a-red-tail-light-and-the-rims-of-the-wheel-are-visible_662214-561614.jpg");
+  }
+  .hero-title { 
+    font-style: 10px;
+  }  
+  .hero-title .accent {
+    font-size: 90px;
+}
+} 
+
+
+
+
+/* .hero-section {
+  background-image: url("../img/converted_image.png");
+  display: block;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+
   
 }
-}  */
+
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0); 
+  }
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; 
+  }
+}
+.video-container {
+  position: absolute;
+  top: 0;  
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+} 
+
+#intro-video {
+  position: absolute; 
+  left: 0;
+  width: 100%;
+  height: 100vh; 
+  object-fit: cover; 
+  opacity: 1;
+  animation: fadeInVideo 2s forwards, slideUpVideo 2s 1s forwards, fadeOutVideo 0.5s 3s forwards; 
+}
+
+@keyframes fadeInVideo {
+  to {
+    opacity: 1; 
+  }
+}
+
+@keyframes slideUpVideo {
+  from {
+    transform: translateY(50px); 
+  }
+  to {
+    transform: translateY(0); 
+  }
+}
+
+@keyframes fadeOutVideo {
+  to {
+    opacity: 0; 
+  }
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-content {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 2;
+}
+.hero-title {
+  position: absolute;
+  text-align: center;
+  font-size: 50px;
+  color: rgba(0, 255, 255, 1);
+  padding-left: 20px;
+  padding-top: 50px;
+
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.7), 
+  4px 4px 0 rgba(0, 0, 0, 0.5), 
+  6px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.hero-title .accent {
+  font-size: 90px;
+}
+.hero-btn {
+  position: fixed;
+  width: 120px;
+  height: 50px;
+  bottom: 50px;
+  right: 90px;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.3s;
+  z-index: 2;
+}
+.hero-btn:hover {
+  background-color: rgba(0, 255, 255, 0.8); 
+  color: #000; 
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 25px rgba(0, 255, 255, 0.5); 
+  font-weight: 600;
+  transform: scale(1.2);
+  border: 2px solid rgba(0, 255, 255, 1); 
+}
+ */

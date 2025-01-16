@@ -56,6 +56,8 @@
   font-size: 18px;
   color: white;
   transition: color 0.3s, font-size 0.3s, border-bottom 0.3s, background-color 0.3s, transform 0.3s;
+  height: 30px;
+  line-height: 30px;
 }
 .header-link:hover,
 .header-link:focus {
@@ -64,11 +66,25 @@
   background-color: rgba(0, 0, 0, 0.1);
   transform: scale(1.1);
 }
-
+.menu-buttons {
+  display: none;
+}
 .burger-menu {
   display: none;
 }
 #mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8); /* Прозорий чорний фон */
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+}
+.hidden {
   display: none;
 }
 
@@ -78,8 +94,13 @@
     background-color: rgba(21, 19, 19, 0.966);
   }  
   .header-nav {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
+  }
+  #mobile-menu.open {
+    display: block;
   }
   .logo-burger-mobile {
     display: flex;
@@ -87,6 +108,34 @@
     justify-content: space-around;
     gap: 30px;
   
+  }
+  #open-menu-btn {
+    background-color: #4CAF50; /* Колір кнопки */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #close-menu-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .menu-buttons {
+    display: flex;
+    align-items: center;
+  }
+  .menu-btn-icon {
+    fill: white;
+    transition: fill 0.3s ease;
+  
+  }
+  
+  .menu-btn:hover .menu-btn-icon {
+    fill: rgba(0, 255, 255, 1);
   }
   .header-list {
     display: flex; 
@@ -119,12 +168,16 @@
     background-color: rgba(0, 0, 0, 0.8);
     width: 70%;
     height: 100%;
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
+    /* transform: translateX(100%);
+    transition: transform 0.3s ease; */
   }
-  .menu-container.is-open {
+  /* .menu-container.open {
     transform: translateX(0);
-  }
+  } */
+  /* .menu-container.close {
+    transform: translateX(100%);
+  } */
+  
 
   .mobile-menu-list {
     display: flex;
@@ -148,12 +201,7 @@
   .mobile-menu-link:focus {
     color: rgba(0, 255, 255, 1);
   }
-  .js-close-menu {
-    color: red;
-    width: 50px;
-    height: 50px;
-  } 
-  
+    
 }  
 
 

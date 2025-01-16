@@ -42,23 +42,7 @@ button {
   padding-bottom: 40px; 
 }
 
-@media only screen and (min-width: 768px) {
-  .section {
-    padding-top: 50px;
-    padding-bottom: 50px; 
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-
-
 .container {
-  /* phone devices */
   min-width: 320px;
   max-width: 375px;
   margin: 0;
@@ -68,19 +52,29 @@ button {
   margin-right: auto; 
 }
 
+
 @media screen and (min-width: 768px) {
+  /* Tablet devices */
+  .section {
+    padding-top: 50px;
+    padding-bottom: 50px; 
+  }
   .container {
-    /* Tablet devices */
     max-width: 736px;
     padding-left: 16px;
     padding-right: 16px;
   }
 }
-  
-@media screen and (min-width: 1200px) {
+
+@media only screen and (min-width: 1200px) {
+   /* Desktop devices */
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .container {
-    /* Desktop devices */
     max-width: 1168px;
+  }
 }
-  
-}
+
+
