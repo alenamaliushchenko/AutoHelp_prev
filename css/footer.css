@@ -101,7 +101,9 @@ footer::before {
 .footer-social-icon {
   fill: white;
 }
-
+.location {
+  color: white;
+} 
 
 
 @media screen and (min-width: 768px) {
@@ -150,6 +152,3 @@ footer::before {
   
 
 
-.location {
-  color: white;
-} */
