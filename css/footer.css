@@ -28,19 +28,21 @@ footer::before {
 .footer-title-about {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
 }
 .footer-title {
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   color: rgba(0, 255, 255, 1);
+  padding-bottom: 20px;
 }
 .footer-subtitle {
-  font-size: 15px;
+  font-size: 14px;
+  
 }
 
 .footer-slogan {
-  font-size: 14px;
+  font-size: 10px;
 }
 .footer-contact {
   display: flex;
@@ -65,7 +67,7 @@ footer::before {
   flex-direction: row;
 }
 .contact-phone svg {
-  margin-right: 8px; 
+  margin-right: 5px; 
 }
 .icon-phone-call {
   fill: white;
@@ -89,9 +91,6 @@ footer::before {
   fill: rgba(0, 255, 255, 1); 
 }
 
-
-
-
 .social-link {
   display: flex;
   align-items: center;
@@ -107,6 +106,24 @@ footer::before {
 
 @media screen and (min-width: 768px) {
   /* Tablet devices */
+  .footer-container {
+    flex-direction: row;
+  }
+  .footer-title-about {
+    width: 50%;
+  }
+  .footer-contact {
+    width: 50%;
+  }
+  .footer-title {
+    font-size: 35px;
+  }
+  .footer-subtitle {
+    font-size: 25px;
+  }
+  .footer-slogan {
+    font-size: 15px;
+  }
 
 }
 
@@ -114,10 +131,19 @@ footer::before {
 
 @media only screen and (min-width: 1200px) {
    /* Desktop devices */
+   .footer-title {
+    font-size: 40px;
+  }
+  .footer-subtitle {
+    font-size: 30px;
+  }
+  .footer-slogan {
+    font-size: 20px;
+  }
 
 }
 
-/* 
+
 
 
 
