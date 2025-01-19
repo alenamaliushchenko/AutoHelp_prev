@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Функція для завантаження HTML контенту в елемент
-  const loadHTML = (selector, url) => {
+  const loadHTML = (selector, url, callback) => {
     fetch(url)
       .then(response => {
         if (!response.ok) throw new Error("Network response was not ok");
@@ -8,14 +8,71 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then(data => {
         document.querySelector(selector).innerHTML = data;
+        if (callback) callback(); // Викликаємо callback після завантаження
       })
       .catch(error => console.error("Error loading HTML:", error));
   };
 
-  // Завантажуємо контент у відповідні секції
+  // Завантажуємо контент у секцію #hero
+  loadHTML("#hero", "partials/hero.html", () => {
+    const title = document.getElementById("animated-title");
+
+    if (title) {
+      const text = title.innerText;
+      title.innerText = ""; // Очищуємо початковий текст
+
+      [...text].forEach((char, index) => {
+        const span = document.createElement('span');
+        span.innerText = char;
+        title.appendChild(span);
+
+        // Застосовуємо анімацію з затримкою для кожного символу
+        setTimeout(() => {
+          span.style.opacity = "1";
+          span.style.transform = "translateY(0)";
+        }, 200 * index);
+      });
+    } else {
+      console.error('Елемент з id "animated-title" не знайдено');
+    }
+
+    // Анімація підзаголовка
+    const subtitle = document.getElementById("subtitle");
+    if (subtitle) {
+      const subText = subtitle.innerText;
+      subtitle.innerText = ""; // Очищуємо початковий текст
+
+      // Розбиваємо текст підзаголовка на символи, включаючи пробіли як окремі елементи
+      const subtitleChars = subText.split('');
+
+      // Застосовуємо анімацію для підзаголовка після завершення анімації заголовка
+      const animateSubtitle = () => {
+        subtitleChars.forEach((char, index) => {
+          const subSpan = document.createElement('span');
+          subSpan.innerText = char === ' ' ? '\u00A0' : char; // використовуємо \u00A0 для пробілу, щоб він анімувався
+          subtitle.appendChild(subSpan);
+
+          // Затримка для кожного символу підзаголовка
+          setTimeout(() => {
+            subSpan.style.opacity = "1";
+            subSpan.style.transform = "translateY(0)";
+          }, 100 * index); // Затримка для підзаголовка
+        });
+      };
+
+      // Чекаємо завершення анімації заголовка, потім анімувати підзаголовок
+      const titleSpans = title.querySelectorAll('span');
+      const lastTitleSpan = titleSpans[titleSpans.length - 1];
+
+      // Викликаємо animateSubtitle після завершення анімації останнього символу заголовка
+      lastTitleSpan.addEventListener('transitionend', animateSubtitle,  { once: true });
+    } else {
+      console.error('Елемент з id "subtitle" не знайдено');
+    }
+  });
+
+  // Завантаження інших частин сторінки
   loadHTML("#header", "partials/header.html");
-  // loadHTML("#hero-animation", "partials/hero-animation.html");
-  loadHTML("#hero", "partials/hero.html");
   loadHTML("#about-us", "partials/about-us.html");
   loadHTML("#our-services", "partials/our-services.html");
   loadHTML("#reviews", "partials/reviews.html");
@@ -23,18 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// window.onload = function () {
-//   const introVideo = document.getElementById('intro-video');
 
-//   if (introVideo) {  // Перевіряємо, чи існує елемент
-//     // Затримка на 5 секунд, після чого відео зникає
-//     setTimeout(() => {
-//       introVideo.style.opacity = 0; // Робимо відео невидимим
-//     }, 5000); // 5000 мілісекунд = 5 секунд
-//   } else {
-//     console.error('Відео з ID "intro-video" не знайдено');
-//   }
-// };
 
 
 
@@ -76,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //     closeMenuBtn.classList.add("hidden"); // Сховати кнопку закриття
 //     openMenuBtn.classList.remove("hidden"); // Показати кнопку відкриття
 //   });
-// });
+
 
 
 
@@ -119,50 +165,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// // Анімація
-// // Стилі для контейнера, щоб центрований заголовок був по центру по вертикалі
-// document.body.style.display = "flex";
-// document.body.style.flexDirection = "column";
-// document.body.style.justifyContent = "center";
-// document.body.style.height = "100vh";
-// document.body.style.margin = "0";
-// document.body.style.background = "black";
-// document.body.style.color = "aqua";
-
-
-// const title = document.getElementById("animated-title");
-// title.style.fontSize = "90px";
-// title.style.textAlign = "center";
-// title.style.fontWeight = "bold"; // Робимо шрифт жирним
-// title.style.letterSpacing = "5px"; // Задаємо відстань між літерами
-// title.style.textShadow = "2px 2px 5px rgba(0, 255, 255, 0.5)"; // Тінь для тексту
-
-// const text = title.innerText;
-// title.innerText = "";   // Очищуємо початковий текст
-
-// // Додаємо кожну літеру в окремий <span>
-// [...text].forEach((char, index) => {
-//   const span = document.createElement('span');
-//   span.innerText = char;
-
-//   // Додаємо початкові стилі для анімації
-//   span.style.opacity = "0";
-//   span.style.transform = "translateY(20px)";
-//   span.style.transition = "opaсity 1s, transform 1s";
-//   span.style.display = "inline-block";
-  
-  
-//   title.appendChild(span);
-
-//   setTimeout(() => {
-//     // Додаємо стилі для анімації
-//     span.style.opacity = "1";
-//     span.style.transform = "translateY(0)";
-
-//   }, 200 * index);  // Кожна літера буде з'являтися з інтервалом 200 мс
-// });
-
-// const subtitle = document.querySelector("h2");
-// subtitle.style.fontSize = "40px";
-// subtitle.style.textAlign = "center";
-// subtitle.style.marginTop = "20px";

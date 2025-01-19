@@ -23,7 +23,7 @@
   z-index: 1;
   pointer-events: none;
 }
-.hero-title {
+/* .hero-title {
   position: absolute;
   text-align: center;
   font-size: 50px;
@@ -34,11 +34,42 @@
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.7), 
   4px 4px 0 rgba(0, 0, 0, 0.5), 
   6px 6px 0 rgba(0, 0, 0, 0.3);
+} */
+
+/* .hero-title .accent {
+  font-size: 90px;
+} */
+
+/* Основні стилі для #animated-title */
+#animated-title {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: rgba(0, 255, 255, 1); /* Основний колір тексту */
+  text-shadow: 
+    2px 2px 0 rgba(0, 0, 0, 0.8),
+    4px 4px 0 rgba(0, 0, 0, 0.6),
+    6px 6px 0 rgba(0, 0, 0, 0.4);
+}
+#subtitle {
+  font-size: 20px;
+  color: black;
+  text-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.5), /* Темна тінь */
+    -2px -2px 5px rgba(255, 255, 255, 0.8),/* Світла тінь для контрасту */
+    1px 1px 0 rgba(0, 255, 255, 0.8), /* Бірюзова тінь 1 */
+    2px 2px 0 rgba(0, 255, 255, 0.6), /* Бірюзова тінь 2 */
+    3px 3px 0 rgba(0, 255, 255, 0.4);
+}
+/* Стилі для анімації символів */
+#animated-title span, #subtitle span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
 }
 
-.hero-title .accent {
-  font-size: 90px;
-}
 .hero-btn {
   position: fixed;
   bottom: 30px;
@@ -66,9 +97,28 @@
   border: 2px solid rgba(0, 255, 255, 1); /* Додати кольоровий контур */
 }
 
-
-@media (max-width: 768px) {
-  .hero-section {
+@media screen and (min-width: 768px) {
+  #animated-title {
+    font-size: 100px;
+    text-align: left;
+    letter-spacing: 5px;
+    color: rgba(0, 255, 255, 1); /* Основний колір тексту */
+    text-shadow: 
+    2px 2px 0 rgba(0, 0, 0, 0.8),
+    4px 4px 0 rgba(0, 0, 0, 0.6),
+    6px 6px 0 rgba(0, 0, 0, 0.4);
+  }
+  #subtitle {
+    font-size: 60px;
+    color: black;
+    text-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.5), /* Темна тінь */
+    -2px -2px 5px rgba(255, 255, 255, 0.8),/* Світла тінь для контрасту */
+    1px 1px 0 rgba(0, 255, 255, 0.8), /* Бірюзова тінь 1 */
+    2px 2px 0 rgba(0, 255, 255, 0.6), /* Бірюзова тінь 2 */
+    3px 3px 0 rgba(0, 255, 255, 0.4);
+  }
+  /* .hero-section {
     height: 50vh; 
   }
   .hero-title { 
@@ -76,7 +126,7 @@
   }  
   .hero-title .accent {
     font-size: 90px;
-}
+} */
 } 
 
 
