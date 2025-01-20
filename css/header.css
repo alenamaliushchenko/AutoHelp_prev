@@ -3,7 +3,7 @@
   position: sticky;
   top: 0;
   background-color: #fff;
-  z-index: 100; 
+  z-index: 15; 
 } 
 .header-container {
   position: relative;
@@ -80,7 +80,7 @@
   margin-left: auto;
 }
 .mobile-menu {
-  /* z-index: 9999; */
+  /* z-index: 9998; */
   position: fixed;
   top: 0;
   left: 0;
