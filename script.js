@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!response.ok) throw new Error("Network response was not ok");
         return response.text();
       })
-      .then(data => {
-        document.querySelector(selector).innerHTML = data;
+      .then(html => {
+        document.querySelector(selector).innerHTML = html.replace(/<script.*script>/, "");
         if (callback) callback(); // Викликаємо callback після завантаження
       })
       .catch(error => console.error("Error loading HTML:", error));
@@ -79,22 +79,22 @@ document.addEventListener('DOMContentLoaded', () => {
   loadHTML("#footer-container", "partials/footer.html");
 
 
-  loadHTML("#header", "partials/header.html", () => {
-    const menuBtn = document.querySelector('.menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const headerList = document.querySelector('.header-list');
+//   loadHTML("#header", "partials/header.html", () => {
+//     const menuBtn = document.querySelector('.menu-btn');
+//     const mobileMenu = document.querySelector('.mobile-menu');
+//     const headerList = document.querySelector('.header-list');
 
-    if (menuBtn && mobileMenu && headerList) {
-        menuBtn.addEventListener('click', () => {
-            const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-            menuBtn.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
-            headerList.classList.toggle('hidden');
-        });
-    } else {
-        console.error('Елементи меню не знайдено');
-    }
-});
+//     if (menuBtn && mobileMenu && headerList) {
+//         menuBtn.addEventListener('click', () => {
+//             const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+//             menuBtn.setAttribute('aria-expanded', !isExpanded);
+//             mobileMenu.classList.toggle('hidden');
+//             headerList.classList.toggle('hidden');
+//         });
+//     } else {
+//         console.error('Елементи меню не знайдено');
+//     }
+// });
 });
 
 

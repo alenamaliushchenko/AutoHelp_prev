@@ -66,10 +66,10 @@
 }
 .header-link:hover,
 .header-link:focus {
-  font-size: 20px;
+  /* font-size: 20px; */
   border-bottom: 3px solid rgba(0, 255, 255, 1);
-  background-color: rgba(0, 0, 0, 0.1);
-  transform: scale(1.1);
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  /* transform: scale(1.1); */
 }
 
   /* Стилі для мобільного меню */
@@ -89,8 +89,13 @@
   height: 100%;
   padding: 72px 14px 40px;
   background-color: rgba(0, 0, 0, 0.95);
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 300ms ease;
 }
-
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
 .mobile-menu.menu-btn {
   position: absolute;
   top: 24px;
@@ -122,10 +127,7 @@
     text-decoration: none;
     transition: color 0.3s ease;
   }
-  .mobile-menu-link.current {
-    color: rgba(0, 255, 255, 1);
-  }
-
+  
   .mobile-menu-link:hover,
   .mobile-menu-link:focus {
     color: rgba(0, 255, 255, 1);

@@ -95,15 +95,22 @@ footer::before {
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 30px;
+  gap: 15px;
 }
 
 .footer-social-icon {
   fill: white;
 }
 .location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
+  gap: 15px;
 } 
+.icon-location {
+  fill: white;
+}
 
 
 @media screen and (min-width: 768px) {
