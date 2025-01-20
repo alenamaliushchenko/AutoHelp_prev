@@ -77,6 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
   loadHTML("#our-services", "partials/our-services.html");
   loadHTML("#reviews", "partials/reviews.html");
   loadHTML("#footer-container", "partials/footer.html");
+
+
+  loadHTML("#header", "partials/header.html", () => {
+    const menuBtn = document.querySelector('.menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const headerList = document.querySelector('.header-list');
+
+    if (menuBtn && mobileMenu && headerList) {
+        menuBtn.addEventListener('click', () => {
+            const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+            menuBtn.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            headerList.classList.toggle('hidden');
+        });
+    } else {
+        console.error('Елементи меню не знайдено');
+    }
+});
 });
 
 

@@ -1,31 +1,20 @@
 <header class="header" id="header">
   <div class="header-container container">
     <nav class="header-nav">
-      <!-- <div class="logo-burger-mobile"> -->
+    
         <a href="#home" class="header-logo">
           <img class="header-logo-img" src="./img/AutoHelp_without_slogan.svg" alt="Site logo" width="40" height="40">
             <span class="logo-name">AutoHelp</span>
         </a> 
-       <button class="menu-btn" type="button">
+
+        <!--Бургер меню кнопка -->
+       <button class="menu-btn" type="button" aria-label="Open menu button">
         <svg class="menu-btn-icon" width="28" height="28" >
-          <use href=" "></use>
+          <use href="../img/sprite.svg#icon-menu"></use>
         </svg>
        </button>
-      <!-- </div>    -->
-      <!-- <div class="menu-buttons" id="icon-menu-btn"> -->
-        <!-- Бургер-меню -->
-        <button class="burger-menu" id="open-menu-btn">
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-        </button>  
-        <!-- <button class="menu-btn" id="close-menu-btn">
-          <svg class="menu-btn-icon" width="28" height="28">
-            <use href="/img/symbol-defs.svg#icon-close"></use>
-          </svg>
-        </button> -->
-      <!-- </div> -->
 
+       <!-- Меню -->
       <ul class="header-list">
         <li class="header-item">
           <a class="header-link" href="#about-us">
@@ -49,28 +38,36 @@
         </li>
       </ul>
 
-    <!-- Mobile menu -->
-      <div class="menu-container" id="mobile-menu">
-        <button class="menu-btn" id="close-menu-btn">
+
+
+      <!-- Мобільне меню -->
+      <div class="mobile-menu  hidden">
+        <button class="menu-btn" id="close-menu-btn" type="button" aria-label="Close menu button">
           <svg class="menu-btn-icon" width="28" height="28">
-            <use href="/img/symbol-defs.svg#icon-close"></use>
+            <use href="../img/sprite.svg#icon-cross"></use>
           </svg>
         </button>
+
         <ul class="mobile-menu-list">
           <li class="mobile-menu-item">
-          <a class="mobile-menu-link" href="#about">Про нас</a>
+            <a class="mobile-menu-link current" href="#about">Про нас</a>
           </li>
           <li class="mobile-menu-item">
-          <a class="mobile-menu-link" href="#services">Наші послуги</a>
+            <a class="mobile-menu-link" href="#services">Наші послуги</a>
           </li>
           <li class="mobile-menu-item">
-          <a class="mobile-menu-link" href="#reviews">Відгуки</a>
+            <a class="mobile-menu-link" href="#reviews">Відгуки</a>
           </li>
           <li class="mobile-menu-item">
-          <a class="mobile-menu-link" href="#footer">Контакти</a>
+            <a class="mobile-menu-link" href="#footer">Контакти</a>
           </li>
-        </ul>
+        </ul> 
+
       </div>
+
+   
+        
+      
     </nav>
   </div>
 

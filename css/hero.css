@@ -97,7 +97,7 @@
   border: 2px solid rgba(0, 255, 255, 1); /* Додати кольоровий контур */
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   #animated-title {
     font-size: 100px;
     text-align: left;
@@ -109,7 +109,7 @@
     6px 6px 0 rgba(0, 0, 0, 0.4);
   }
   #subtitle {
-    font-size: 60px;
+    font-size: 50px;
     color: black;
     text-shadow: 
     2px 2px 5px rgba(0, 0, 0, 0.5), /* Темна тінь */
