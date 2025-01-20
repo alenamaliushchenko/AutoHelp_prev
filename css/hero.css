@@ -69,7 +69,7 @@
 .hero-btn {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 100px;
   color: #000;
   width: 120px;
   height: 50px;
@@ -80,7 +80,7 @@
   font-size: 14px;
   cursor: pointer;
   transition: box-shadow 0.3s, transform 0.3s;
-  z-index: index 9999;;
+  z-index: 9999;;
   animation: pulse 2s infinite; 
 }
 

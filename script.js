@@ -78,108 +78,38 @@ document.addEventListener('DOMContentLoaded', () => {
   loadHTML("#reviews", "partials/reviews.html");
   loadHTML("#footer-container", "partials/footer.html");
 
+  const menuBtn = document.querySelector('.menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
 
-//   loadHTML("#header", "partials/header.html", () => {
-//     const menuBtn = document.querySelector('.menu-btn');
-//     const mobileMenu = document.querySelector('.mobile-menu');
-//     const headerList = document.querySelector('.header-list');
+menuBtn.addEventListener('click', () => {
+  menuBtn.classList.toggle('open');
+  mobileMenu.classList.toggle('is-open');
+});
 
-//     if (menuBtn && mobileMenu && headerList) {
-//         menuBtn.addEventListener('click', () => {
-//             const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-//             menuBtn.setAttribute('aria-expanded', !isExpanded);
-//             mobileMenu.classList.toggle('hidden');
-//             headerList.classList.toggle('hidden');
-//         });
-//     } else {
-//         console.error('Елементи меню не знайдено');
-//     }
+//   // Вибираємо кнопку меню та мобільне меню
+// const menuBtn = document.querySelector('.menu-btn');
+// const mobileMenu = document.querySelector('.mobile-menu');
+// const closeMenuBtn = document.querySelector('#close-menu-btn');
+
+// if (menuBtn && mobileMenu && closeMenuBtn) {
+// // Функція для відкриття меню
+// menuBtn.addEventListener('click', function () {
+//   mobileMenu.classList.toggle('visible');  // Відображаємо/сховуємо меню
+//   menuBtn.classList.toggle('open');  // Змінюємо вигляд кнопки на хрестик
 // });
+
+// // Функція для закриття меню
+// closeMenuBtn.addEventListener('click', function () {
+//   mobileMenu.classList.remove('visible');  // Сховуємо меню
+//   menuBtn.classList.remove('open');  // Повертаємо кнопку в початковий стан
+// });
+// } else {
+//   console.error('Елементи для мобільного меню не знайдено');
+// }
 });
 
 
 
-
-
-
-// const openMenuBtn = document.getElementById('open-menu-btn');
-// const closeMenuBtn = document.getElementById('close-menu-btn');
-// const mobileMenu = document.getElementById('mobile-menu');
-
-// // Відкриваємо меню при натисканні на кнопку "Відкрити меню"
-// openMenuBtn.addEventListener('click', function() {
-//   mobileMenu.style.display = 'block';
-// });
-
-// // Закриваємо меню при натисканні на кнопку "Закрити меню"
-// closeMenuBtn.addEventListener('click', function() {
-//   mobileMenu.style.display = 'none';
-// });
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   const openMenuBtn = document.getElementById("open-menu-btn");
-//   const closeMenuBtn = document.getElementById("close-menu-btn");
-//   const mobileMenu = document.getElementById("mobile-menu");
-
-//   // // Перевірка на існування елементів
-//   // if (!openMenuBtn || !closeMenuBtn || !mobileMenu) {
-//   //   console.error("Один або декілька елементів не знайдено в DOM.");
-//   //   return;
-//   // }
-
-// //  / Відкрити меню
-//   openMenuBtn.addEventListener("click", function() {
-//     mobileMenu.classList.add("open"); // Додати клас open для показу меню
-//     openMenuBtn.classList.add("hidden"); // Сховати кнопку відкриття
-//     closeMenuBtn.classList.remove("hidden"); // Показати кнопку закриття
-//   });
-
-//   // Закрити меню
-//   closeMenuBtn.addEventListener("click", function() {
-//     mobileMenu.classList.remove("open"); // Видалити клас open для приховування меню
-//     closeMenuBtn.classList.add("hidden"); // Сховати кнопку закриття
-//     openMenuBtn.classList.remove("hidden"); // Показати кнопку відкриття
-//   });
-
-
-
-
-
-
-
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   // Пошук елементів
-//   const burgerMenu = document.querySelector('.burger-menu');
-//   const mobileMenu = document.querySelector('.js-menu-container');
-//   const closeMenuBtn = document.querySelector('.js-close-menu');
-//   const mobileLinks = document.querySelectorAll('.mobile-menu-link');
-
-//   // Функції відкриття/закриття меню
-//   const openMenu = () => {
-//     mobileMenu.classList.add('is-open');
-//     document.body.style.overflow = 'hidden'; // Блокуємо прокручування
-//   };
-
-//   const closeMenu = () => {
-//     mobileMenu.classList.remove('is-open');
-//     document.body.style.overflow = ''; // Відновлюємо прокручування
-//   };
-
-//   // Додавання слухачів подій
-//   if (burgerMenu) {
-//     burgerMenu.addEventListener('click', openMenu);
-//   }
-
-//   if (closeMenuBtn) {
-//     closeMenuBtn.addEventListener('click', closeMenu);
-//   }
-
-//   mobileLinks.forEach(link => {
-//     link.addEventListener('click', closeMenu); // Закриття меню при натисканні на лінки
-//   });
-// });
 
 
 
