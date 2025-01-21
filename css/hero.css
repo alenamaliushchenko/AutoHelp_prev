@@ -1,14 +1,14 @@
 .hero-section {
-  background-image: url("../img/converted_image.png");
+  background-image: url("./img/converted_image.png");
   background-position:  center center; 
   background-repeat: no-repeat; 
   background-size: cover;
   display: block;
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   overflow: hidden;
   margin: 0;
-  position: relative;
+  position: relative; 
   
   
   transition: opacity 4s ease, visibility 4s ease; /* Плавне з'явлення */
@@ -22,9 +22,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Чорний напівпрозорий фон */
   z-index: 1;
-  pointer-events: none;
+  
 }
-.hero-title {
+/* .hero-title {
   position: absolute;
   text-align: center;
   font-size: 15px;
@@ -33,22 +33,26 @@
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.7), 
   4px 4px 0 rgba(0, 0, 0, 0.5), 
   6px 6px 0 rgba(0, 0, 0, 0.3);
-}
+} */
 
 
 /* Основні стилі для #animated-title */
 #animated-title {
+  padding-top: 100px;
   font-size: 50px;
   text-align: center;
   font-weight: bold;
   letter-spacing: 5px;
-  color: rgba(0, 255, 255, 1); /* Основний колір тексту */
+  color: rgba(0, 255, 255, 1); 
   text-shadow: 
     2px 2px 0 rgba(0, 0, 0, 0.8),
     4px 4px 0 rgba(0, 0, 0, 0.6),
     6px 6px 0 rgba(0, 0, 0, 0.4);
 }
 #subtitle {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
   font-size: 20px;
   color: black;
   text-shadow: 
@@ -80,7 +84,7 @@
   font-size: 14px;
   cursor: pointer;
   transition: box-shadow 0.3s, transform 0.3s;
-  z-index: 9999;;
+  z-index: 9;;
   animation: pulse 2s infinite; 
 }
 
@@ -114,7 +118,6 @@
   .hero-section {
     height: 100vh;
   }
-
   #animated-title {
     font-size: 100px;
     text-align: left;

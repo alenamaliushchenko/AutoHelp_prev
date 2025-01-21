@@ -52,6 +52,7 @@ footer::before {
 }
 .footer-contact-list {
   display: flex;
+  
   flex-wrap: wrap;
   flex-direction: column;
   gap: 15px;
