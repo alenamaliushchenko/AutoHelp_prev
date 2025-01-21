@@ -1,7 +1,7 @@
 .hero-section {
   background-image: url("../img/converted_image.png");
-  /* background-position:  center center;  */
-  /* background-repeat: no-repeat;  */
+  background-position:  center center; 
+  background-repeat: no-repeat; 
   background-size: cover;
   /* display: block; */
   /* width: 100%; */
@@ -9,11 +9,11 @@
   overflow: hidden;
   margin: 0;
   position: relative; 
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  position: relative;
+  text-align: center; */
+ 
   
   /* transition: opacity 4s ease, visibility 4s ease;  */
 }
