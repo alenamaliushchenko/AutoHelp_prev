@@ -15,7 +15,7 @@
   text-align: center;
   position: relative;
   
-  transition: opacity 4s ease, visibility 4s ease; /* Плавне з'явлення */
+  /* transition: opacity 4s ease, visibility 4s ease;  */
 }
 .hero-section::before {
   content: "";
