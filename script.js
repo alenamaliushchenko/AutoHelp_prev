@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => console.error("Error loading HTML:", error));
   };
 
-  
+
   // Завантажуємо контент у секцію #hero
   loadHTML("#hero", "partials/hero.html", () => {
     const title = document.getElementById("animated-title");
@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadHTML("#reviews", "partials/reviews.html");
   loadHTML("#footer-container", "partials/footer.html");
 
+});
 //   const menuBtn = document.querySelector('.menu-btn');
 // const mobileMenu = document.querySelector('.mobile-menu');
 
@@ -107,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // } else {
 //   console.error('Елементи для мобільного меню не знайдено');
 // }
-});
+
 
 
 

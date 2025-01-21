@@ -1,15 +1,19 @@
 .hero-section {
   background-image: url("../img/converted_image.png");
-  background-position:  center center; 
-  background-repeat: no-repeat; 
+  /* background-position:  center center;  */
+  /* background-repeat: no-repeat;  */
   background-size: cover;
-  display: block;
-  width: 100%;
+  /* display: block; */
+  /* width: 100%; */
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden;
   margin: 0;
-  position: relative; 
-  
+  position: relative;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
   
   transition: opacity 4s ease, visibility 4s ease; /* Плавне з'явлення */
 }
@@ -38,7 +42,7 @@
 
 /* Основні стилі для #animated-title */
 #animated-title {
-  padding-top: 100px;
+  /* padding-top: 50px; */
   font-size: 50px;
   text-align: center;
   font-weight: bold;
@@ -52,7 +56,7 @@
 #subtitle {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 10px;
   font-size: 20px;
   color: black;
   text-shadow: 
