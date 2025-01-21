@@ -1,5 +1,5 @@
 .hero-section {
-  background-image: url("./img/converted_image.png");
+  background-image: url("../img/converted_image.png");
   background-position:  center center; 
   background-repeat: no-repeat; 
   background-size: cover;
@@ -120,9 +120,8 @@
   }
   #animated-title {
     font-size: 100px;
-    text-align: left;
     letter-spacing: 5px;
-    color: rgba(0, 255, 255, 1); /* Основний колір тексту */
+    color: rgba(0, 255, 255, 1);
     text-shadow: 
     2px 2px 0 rgba(0, 0, 0, 0.8),
     4px 4px 0 rgba(0, 0, 0, 0.6),
@@ -130,7 +129,6 @@
   }
   #subtitle {
     font-size: 50px;
-    color: black;
     text-shadow: 
     2px 2px 5px rgba(0, 0, 0, 0.5), /* Темна тінь */
     -2px -2px 5px rgba(255, 255, 255, 0.8),/* Світла тінь для контрасту */
@@ -149,7 +147,7 @@
   padding: 10px 10px;
   font-size: 20px;
   transition: box-shadow 0.3s, transform 0.3s;
-  z-index: 20;
+
   
 } 
 

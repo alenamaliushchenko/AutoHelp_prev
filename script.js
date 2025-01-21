@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(error => console.error("Error loading HTML:", error));
   };
 
+  
   // Завантажуємо контент у секцію #hero
   loadHTML("#hero", "partials/hero.html", () => {
     const title = document.getElementById("animated-title");
@@ -78,13 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
   loadHTML("#reviews", "partials/reviews.html");
   loadHTML("#footer-container", "partials/footer.html");
 
-  const menuBtn = document.querySelector('.menu-btn');
-const mobileMenu = document.querySelector('.mobile-menu');
+//   const menuBtn = document.querySelector('.menu-btn');
+// const mobileMenu = document.querySelector('.mobile-menu');
 
-menuBtn.addEventListener('click', () => {
-  menuBtn.classList.toggle('open');
-  mobileMenu.classList.toggle('is-open');
-});
+// menuBtn.addEventListener('click', () => {
+//   menuBtn.classList.toggle('open');
+//   mobileMenu.classList.toggle('is-open');
+// });
 
 //   // Вибираємо кнопку меню та мобільне меню
 // const menuBtn = document.querySelector('.menu-btn');
