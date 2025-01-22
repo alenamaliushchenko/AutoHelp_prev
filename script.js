@@ -97,34 +97,6 @@ menuLinks.forEach(link => {
   link.addEventListener('click', closeMenu); // Закриваємо меню при кліку
 });
 });
-//   const menuBtn = document.querySelector('.menu-btn');
-// const mobileMenu = document.querySelector('.mobile-menu');
-
-// menuBtn.addEventListener('click', () => {
-//   menuBtn.classList.toggle('open');
-//   mobileMenu.classList.toggle('is-open');
-// });
-
-//   // Вибираємо кнопку меню та мобільне меню
-// const menuBtn = document.querySelector('.menu-btn');
-// const mobileMenu = document.querySelector('.mobile-menu');
-// const closeMenuBtn = document.querySelector('#close-menu-btn');
-
-// if (menuBtn && mobileMenu && closeMenuBtn) {
-// // Функція для відкриття меню
-// menuBtn.addEventListener('click', function () {
-//   mobileMenu.classList.toggle('visible');  // Відображаємо/сховуємо меню
-//   menuBtn.classList.toggle('open');  // Змінюємо вигляд кнопки на хрестик
-// });
-
-// // Функція для закриття меню
-// closeMenuBtn.addEventListener('click', function () {
-//   mobileMenu.classList.remove('visible');  // Сховуємо меню
-//   menuBtn.classList.remove('open');  // Повертаємо кнопку в початковий стан
-// });
-// } else {
-//   console.error('Елементи для мобільного меню не знайдено');
-// }
 
 
 
