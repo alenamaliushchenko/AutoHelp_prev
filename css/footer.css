@@ -2,7 +2,6 @@
   position: relative;
   margin-top: -115px;
   z-index: 10;
-  /* height: 50vh; */
   background-color: rgba(21, 19, 19, 1);
   color: white;
   text-align: center;
@@ -38,9 +37,7 @@ footer::before {
 }
 .footer-subtitle {
   font-size: 14px;
-  
 }
-
 .footer-slogan {
   font-size: 10px;
 }
@@ -48,11 +45,9 @@ footer::before {
   display: flex;
   flex-direction: column;
   gap: 15px;
- 
 }
 .footer-contact-list {
   display: flex;
-  
   flex-wrap: wrap;
   flex-direction: column;
   gap: 15px;
@@ -77,28 +72,23 @@ footer::before {
 .footer-contact-item:focus {
   color: rgba(0, 255, 255, 1); 
 }
-
 .footer-contact-item a:hover,
 .footer-contact-item a:focus {
   color: rgba(0, 255, 255, 1);
 }
-
 .footer-contact-item svg {
   transition: fill 0.3s ease; 
 }
-
 .footer-contact-item:hover svg,
 .footer-contact-item:focus svg {
   fill: rgba(0, 255, 255, 1); 
 }
-
 .social-link {
   display: flex;
   align-items: center;
   flex-direction: row;
   gap: 15px;
 }
-
 .footer-social-icon {
   fill: white;
 }
@@ -112,10 +102,7 @@ footer::before {
 .icon-location {
   fill: white;
 }
-
-
 @media screen and (min-width: 768px) {
-  /* Tablet devices */
   .footer-container {
     flex-direction: row;
   }
@@ -134,15 +121,11 @@ footer::before {
   .footer-slogan {
     font-size: 15px;
   }
-
 }
 .copy-writes {
   font-size: 10px;
 }
-
-
 @media only screen and (min-width: 1200px) {
-   /* Desktop devices */
    .footer-title {
     font-size: 40px;
   }
@@ -156,7 +139,6 @@ footer::before {
     flex-wrap: wrap;
     font-size: 10px;
   }
-
 }
 
 

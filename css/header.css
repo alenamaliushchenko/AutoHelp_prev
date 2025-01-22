@@ -39,22 +39,17 @@
 .header-logo .logo-name:focus {
   color: rgba(0, 255, 255, 1);
 }
-
-
-/* Меню чекбокс  */
 .menu-checkbox{
-  display: none; /* Чекбокс прихований */
+  display: none;  
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
 }
-
-/* Бургер кнопка */
 .menu-icon {
   position: absolute;
   top: 10px;
-  right: 20px; /* Переміщення кнопки вправо */
+  right: 20px; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,25 +72,20 @@
 }
 .menu-checkbox:checked + .menu-icon + .mobile-menu-list {
   transform: translateX(0);
-  /* Відображати меню, коли воно відкрите */
 }
 
 .menu-checkbox:not(:checked) + .menu-icon + .mobile-menu-list {
   transform: translateX(-100%);
-  /* Сховати меню, коли не відкрите */
 }
 
-/* Анімація для бургер-кнопки */
 .menu-checkbox:checked + .menu-icon .menu-checkbox-line:nth-child(1) {
   transform: rotate(45deg);
   position: absolute;
   top: 50%;
 }
-
 .menu-checkbox:checked + .menu-icon .menu-checkbox-line:nth-child(2) {
   opacity: 0; 
 }
-
 .menu-checkbox:checked + .menu-icon .menu-checkbox-line:nth-child(3) {
   transform: rotate(-45deg);
   position: absolute;
@@ -105,13 +95,11 @@
   display: flex;
 }
 .mobile-menu-list {
-  /* position: absolute; */
   display: none; 
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   position: fixed;
-
   top: 0;
   left: 0;
   right: 0;
@@ -135,15 +123,10 @@
 .mobile-menu-link:focus {
   border-bottom: 3px solid rgba(0, 255, 255, 1);
 }  
-
-
 .header-item {
   padding: 10px 0;
   transition-delay: 2s;
 }
-
-
-
 .header-list {
   display: none;
 }
@@ -154,16 +137,13 @@
 .mobile-contact-item:focus {
   color: rgba(0, 255, 255, 1); 
 }
-
 .mobile-contact-item a:hover,
 .mobile-contact-item a:focus {
   color: rgba(0, 255, 255, 1);
 }
-
 .mobile-contact-item svg {
   transition: fill 0.3s ease; 
 }
-
 .mobile-contact-item:hover svg,
 .mobile-contact-item:focus svg {
   fill: rgba(0, 255, 255, 1); 
@@ -177,58 +157,49 @@
   flex-direction: row;
   gap: 15px;
 }
-
 .mobile-social-icon {
   fill: white;
 }
 
-
 @media only screen and (min-width: 768px) {
-.header {
-  position: fixed;
-}
-.mobile-menu {
-  display: none;
-}
-.menu-checkbox {
-  display: none;
-}
-.menu-icon {
-  display: none;
-} 
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 0;
-}
-.header-list {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 20px; 
-  padding-top: 15px;
-}
-
-.header-item {
-  margin-bottom: 20px;
-}
-.header-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: 18px;
-  color: white;
-  transition: color 0.3s, font-size 0.3s, border-bottom 0.3s, background-color 0.3s, transform 0.3s;
-  height: 30px;
-  line-height: 30px;
-}
-.header-link:hover,
-.header-link:focus {
-  border-bottom: 3px solid rgba(0, 255, 255, 1);
-}
-
- 
+  .header {
+    position: fixed;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .menu-checkbox {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+  } 
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
+  }
+  .header-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px; 
+  }
+  .header-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s, font-size 0.3s, border-bottom 0.3s, background-color 0.3s, transform 0.3s;
+    height: 30px;
+    line-height: 30px;
+  }
+  .header-link:hover,
+  .header-link:focus {
+    border-bottom: 3px solid rgba(0, 255, 255, 1);
+  }
 }  
 
 

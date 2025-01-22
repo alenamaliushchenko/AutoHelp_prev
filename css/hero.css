@@ -4,10 +4,8 @@
   background-repeat: no-repeat; 
   background-size: cover;
   background-attachment: scroll;
-  /* display: block; */
   width: 100%;
   height: 100vh;
-  /* overflow: hidden; */
   margin: 0;
   position: relative; 
 }
@@ -18,10 +16,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Чорний напівпрозорий фон */
+  background-color: rgba(0, 0, 0, 0.5); 
   z-index: 1;  
 }
-/* Основні стилі для #animated-title */
 #animated-title {
   padding-top: 20px;
   font-size: 50px;
@@ -41,20 +38,18 @@
   font-size: 20px;
   color: black;
   text-shadow: 
-    2px 2px 5px rgba(0, 0, 0, 0.5), /* Темна тінь */
-    -2px -2px 5px rgba(255, 255, 255, 0.8),/* Світла тінь для контрасту */
-    1px 1px 0 rgba(0, 255, 255, 0.8), /* Бірюзова тінь 1 */
-    2px 2px 0 rgba(0, 255, 255, 0.6), /* Бірюзова тінь 2 */
+    2px 2px 5px rgba(0, 0, 0, 0.5),
+    -2px -2px 5px rgba(255, 255, 255, 0.8),
+    1px 1px 0 rgba(0, 255, 255, 0.8), 
+    2px 2px 0 rgba(0, 255, 255, 0.6),
     3px 3px 0 rgba(0, 255, 255, 0.4);
 }
-/* Стилі для анімації символів */
 #animated-title span, #subtitle span {
   display: inline-block;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s, transform 1s;
 }
-
 .hero-btn {
   position: fixed;
   bottom: 30px;
@@ -72,30 +67,28 @@
   z-index: 9;;
   animation: pulse 2s infinite; 
 }
-
 .hero-btn:hover {
-  background-color: rgba(0, 255, 255, 0.8); /* Яскравий фон */
-  color: #000; /* Контрастний текст */
-  box-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 25px rgba(0, 255, 255, 0.5); /* Інтенсивніша тінь */
+  background-color: rgba(0, 255, 255, 0.8);
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1), 0 0 25px rgba(0, 255, 255, 0.5); 
   font-weight: 600;
-  transform: scale(1.2); /* Збільшення при наведенні */
-  border: 2px solid rgba(0, 255, 255, 1); /* Додати кольоровий контур */
+  transform: scale(1.2); 
+  border: 2px solid rgba(0, 255, 255, 1); 
 }
 
-/* Анімація пульсації */
 @keyframes pulse {
   0% {
-    transform: scale(1); /* Початковий розмір */
+    transform: scale(1); 
     border: 2px solid rgba(0, 255, 255, 0.2);
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), 0 0 20px rgba(0, 255, 255, 0.1);
   }
   50% {
-    transform: scale(1.1); /* Збільшення при пульсації */
+    transform: scale(1.1); 
     border: 2px solid rgba(0, 255, 255, 0.5);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
   }
   100% {
-    transform: scale(1); /* Повернення до початкового розміру */
+    transform: scale(1); 
     border: 2px solid rgba(0, 255, 255, 0.2);
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), 0 0 20px rgba(0, 255, 255, 0.1);
   }
@@ -114,10 +107,10 @@
   #subtitle {
     font-size: 50px;
     text-shadow: 
-    2px 2px 5px rgba(0, 0, 0, 0.5), /* Темна тінь */
-    -2px -2px 5px rgba(255, 255, 255, 0.8),/* Світла тінь для контрасту */
-    1px 1px 0 rgba(0, 255, 255, 0.8), /* Бірюзова тінь 1 */
-    2px 2px 0 rgba(0, 255, 255, 0.6), /* Бірюзова тінь 2 */
+    2px 2px 5px rgba(0, 0, 0, 0.5),
+    -2px -2px 5px rgba(255, 255, 255, 0.8),
+    1px 1px 0 rgba(0, 255, 255, 0.8), 
+    2px 2px 0 rgba(0, 255, 255, 0.6), 
     3px 3px 0 rgba(0, 255, 255, 0.4);
   }
   .hero-btn {   
@@ -126,7 +119,6 @@
   height: 80px;
   bottom: 50px;
   right: 100px; 
-  
   border-radius: 5px;
   padding: 10px 10px;
   font-size: 20px;
