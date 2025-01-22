@@ -96,4 +96,12 @@ const menuLinks = document.querySelectorAll('.mobile-menu-link');
 menuLinks.forEach(link => {
   link.addEventListener('click', closeMenu); // Закриваємо меню при кліку
 });
+
+if (document.querySelector('#reviews-widget')) {
+  const script = document.createElement('script');
+  script.src = 'https://static.elfsight.com/app/googleReviews.js';
+  script.defer = true;
+  document.body.appendChild(script);
+}
+
 });
