@@ -79,6 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
   loadHTML("#reviews", "partials/reviews.html");
   loadHTML("#footer-container", "partials/footer.html");
 
+ // Закриття меню при натисканні на будь-який елемент меню
+ function closeMenu() {
+  document.getElementById("menu-toggle").checked = false; // Закриває меню
+}
+
+
+// Вибираємо усі елементи меню та додаємо обробник подій
+const menuLinks = document.querySelectorAll('.mobile-menu a');
+menuLinks.forEach(link => {
+  link.addEventListener('click', closeMenu); // Закриваємо меню при натисканні на пункт
+});
 });
 //   const menuBtn = document.querySelector('.menu-btn');
 // const mobileMenu = document.querySelector('.mobile-menu');

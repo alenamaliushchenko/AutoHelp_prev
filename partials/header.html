@@ -1,18 +1,12 @@
-<header class="header" id="header">
-  <div class="header-container container">
-    <nav class="header-nav">
-    
+<html>
+  <body>
+  <header class="header" id="header">
+    <div class="header-container container">
+      <nav class="header-nav">
         <a href="#home" class="header-logo">
           <img class="header-logo-img" src="./img/AutoHelp_without_slogan.svg" alt="Site logo" width="40" height="40">
             <span class="logo-name">AutoHelp</span>
         </a> 
-
-        <!--Бургер меню кнопка -->
-       <button class="menu-btn" type="button" aria-label="Open menu button">
-        <svg class="menu-btn-icon" width="28" height="28" >
-          <use href="./img/sprite.svg#icon-menu"></use>
-        </svg>
-       </button>
 
        <!-- Меню -->
       <ul class="header-list">
@@ -38,38 +32,62 @@
         </li>
       </ul>
 
-
-
-      <!-- Мобільне меню -->
-      <div class="mobile-menu  hidden">
-        <button class="menu-btn" id="close-menu-btn" type="button" aria-label="Close menu button">
-          <svg class="close-menu-btn-icon" width="28" height="28">
-            <use href="./img/sprite.svg#icon-cross"></use>
-          </svg>
-        </button>
+      <!--Мобільне меню -->
+      <div class="menu-container">
+        <input id="menu-toggle" class="menu-checkbox" type="checkbox" />
+          <label for="menu-toggle" class="menu-icon">
+          <span class="menu-checkbox-line"></span>
+          <span class="menu-checkbox-line"></span>
+          <span class="menu-checkbox-line"></span>
+          </label>  
 
         <ul class="mobile-menu-list">
           <li class="mobile-menu-item">
-            <a class="mobile-menu-link current" href="#about">Про нас</a>
+            <a class="mobile-menu-link" href="#about-us" onclick="closeMenu()">Про нас</a>
           </li>
           <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="#services">Наші послуги</a>
+            <a class="mobile-menu-link" href="#services" onclick="closeMenu()">Наші послуги</a>
           </li>
           <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="#reviews">Відгуки</a>
+            <a class="mobile-menu-link" href="#reviews" onclick="closeMenu()">Відгуки</a>
           </li>
           <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="#footer">Контакти</a>
+            <a class="mobile-menu-link" href="#footer" onclick="closeMenu()">Контакти</a>
+          </li>
+          <li class="mobile-contact-item">
+            <a href="tel:+380938851725" class="contact-phone">
+              <svg class="icon-phone-call" width="22px" height="22px">
+                <use href="./img/sprite.svg#icon-phone"></use>
+              </svg>
+              +380938851725
+            </a>
+          </li>
+          <li class="mobile-social-item">
+            <a
+              class="mobile-social-link"
+              href="https://www.instagram.com/lviv_auto_help/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Instagram page"
+              title="Visit our Instagram"
+            >
+            Слідкуйте за нами
+              <svg class="mobile-social-icon" width="22px" height="22px">
+                <use href="./img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
           </li>
         </ul> 
-
-      </div>
+  
+    </div>
+      <!-- </div> -->
 
    
         
       
     </nav>
-  </div>
+    </div>
 
-</header>
-      
+  </header>
+</body>
+</html>

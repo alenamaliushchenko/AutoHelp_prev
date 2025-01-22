@@ -11,23 +11,16 @@
   color: white;
   overflow: hidden;
   max-width: 100%;
-  /* margin: 0;
-  padding-left: 20px; */
 }
 .header-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-grow: 1;
-  /* margin-right: auto; */
 }
 .header-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* padding-top: 20px;
-  padding-bottom: 14px; */
 }
 .header-logo-img {
   display: block; 
@@ -43,28 +36,93 @@
   color: rgba(0, 255, 255, 1);
 }
 
+
+/* Меню чекбокс  */
+.menu-checkbox{
+  display: none; /* Чекбокс прихований */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  /* opacity: 0; */
+  /* display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute; */
+  /* display: none; */
+  /* top: 20px;
+  right: 20px;
+  cursor: pointer; */
+  /* opacity: 0; */
+  /* z-index: 2; */
+
+}
+
+/* Бургер кнопка */
+.menu-icon {
+  position: absolute;
+  top: 10px;
+  right: 20px; /* Переміщення кнопки вправо */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 100;
+}
+.menu-checkbox-line {
+  box-sizing: border-box;
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin-bottom: 5px;
+  background: #ffffff;
+  border-radius: 2px;
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;              
+}
+
+/* Анімація для бургер-кнопки */
+.menu-checkbox:checked + .menu-icon .menu-checkbox-line:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+}
+
+.menu-checkbox:checked + .menu-icon .menu-checkbox-line:nth-child(2) {
+  opacity: 0; 
+}
+
+.menu-checkbox:checked + .menu-icon .menu-checkbox-line:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  
+}
   /* Стилі для мобільного меню */
-.menu-btn {
+/* .menu-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: auto;
-  /* fill: #fff; */
+  fill: #fff; 
   background: none;
   display: inline-block;
-}
+} */
 
-.menu-btn-icon {
+/* .menu-btn-icon {
   fill: #fff;
   stroke-width: 1px;  
   transition: transform 0.3s ease, opacity 0.3s ease;
-}
+} */
 /* Стилі для хрестика при активному стані */
-.menu-btn.open .menu-btn-icon use {
-  opacity: 0; /* Сховати оригінальну іконку меню */
-}
+/* .menu-btn.open .menu-btn-icon use {
+  opacity: 0;
+} */
 /* Додаємо стилі для хрестика */
-.menu-btn.open .menu-btn-icon::after {
+/* .menu-btn.open .menu-btn-icon::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -74,14 +132,14 @@
   background-color: #000;
   transform-origin: center;
   transition: transform 0.3s ease;
-}
+} */
 /* Стилі для обертання хрестика */
-.menu-btn.open .menu-btn-icon::after {
+/* .menu-btn.open .menu-btn-icon::after {
   transform: rotate(45deg);
-}
+} */
 
 /* Стилі для додаткового елемента, щоб зробити хрестик з двох ліній */
-.menu-btn.open .menu-btn-icon::before {
+/* .menu-btn.open .menu-btn-icon::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -91,13 +149,13 @@
   background-color: #000;
   transform-origin: center;
   transition: transform 0.3s ease;
-}
+} */
 
 /* Обертання іншої лінії хрестика */
-.menu-btn.open .menu-btn-icon::before {
+/* .menu-btn.open .menu-btn-icon::before {
   transform: rotate(-45deg);
-}
-.mobile-menu {
+} */
+/* .mobile-menu {
   z-index: 30;
   position: fixed;
   top: 0;
@@ -110,7 +168,7 @@
   transform: translateX(-100%);
   visibility: hidden;
   transition: transform 300ms ease;
-}
+} */
 /* .mobile-menu.is-open {
   transform: translateX(0);
 } */
@@ -131,14 +189,35 @@
   opacity: 0;
   z-index: 35;
 } */
+.menu-checkbox:checked ~ .mobile-menu-list {
+  display: flex;
+}
 .mobile-menu-list {
+  /* position: absolute; */
+  display: none; 
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 80vh;
+  padding-top: 50px;
+  padding-left: 50px;
+  
+}
+
+/* .mobile-menu-list {
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 100px;
-}
+} */
+
 .mobile-menu-item {
   margin-bottom: 20px;
 }
@@ -148,24 +227,65 @@
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 .mobile-menu-link:hover,
 .mobile-menu-link:focus {
-  color: rgba(0, 255, 255, 1);
+  border-bottom: 3px solid rgba(0, 255, 255, 1);
+  /* color: rgba(0, 255, 255, 1); */
 }  
+
+
+.header-item {
+  padding: 10px 0;
+  transition-delay: 2s;
+}
+
+
 
 .header-list {
   display: none;
 }
+.mobile-contact-item {
+  padding-top: 40px;
+}
+.mobile-contact-item:hover,
+.mobile-contact-item:focus {
+  color: rgba(0, 255, 255, 1); 
+}
 
+.mobile-contact-item a:hover,
+.mobile-contact-item a:focus {
+  color: rgba(0, 255, 255, 1);
+}
+
+.mobile-contact-item svg {
+  transition: fill 0.3s ease; 
+}
+
+.mobile-contact-item:hover svg,
+.mobile-contact-item:focus svg {
+  fill: rgba(0, 255, 255, 1); 
+}
+.mobile-social-item {
+  padding-top: 30px;
+}
+.mobile-social-link {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.mobile-social-icon {
+  fill: white;
+}
 @media only screen and (min-width: 768px) {
 .mobile-menu {
   display: none;
 }
-.menu-btn  {
+.menu-checkbox {
   display: none;
 }
-.hidden {
+.menu-icon {
   display: none;
 } 
 .header-list {
