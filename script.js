@@ -79,16 +79,22 @@ document.addEventListener('DOMContentLoaded', () => {
   loadHTML("#reviews", "partials/reviews.html");
   loadHTML("#footer-container", "partials/footer.html");
 
- // Закриття меню при натисканні на будь-який елемент меню
- function closeMenu() {
-  document.getElementById("menu-toggle").checked = false; // Закриває меню
+ // Функція для закриття меню
+function closeMenu() {
+  document.getElementById('menu-toggle').checked = false;
 }
 
+// Відслідковуємо прокручування сторінки
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 0) { // Якщо сторінка прокручена вниз
+    closeMenu(); // Закрити меню
+  }
+});
 
-// Вибираємо усі елементи меню та додаємо обробник подій
-const menuLinks = document.querySelectorAll('.mobile-menu a');
+// Відслідковуємо кліки по посиланнях
+const menuLinks = document.querySelectorAll('.mobile-menu-link');
 menuLinks.forEach(link => {
-  link.addEventListener('click', closeMenu); // Закриваємо меню при натисканні на пункт
+  link.addEventListener('click', closeMenu); // Закриваємо меню при кліку
 });
 });
 //   const menuBtn = document.querySelector('.menu-btn');
