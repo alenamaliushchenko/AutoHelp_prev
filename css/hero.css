@@ -23,6 +23,7 @@
 }
 /* Основні стилі для #animated-title */
 #animated-title {
+  padding-top: 20px;
   font-size: 50px;
   text-align: center;
   font-weight: bold;
@@ -102,6 +103,7 @@
 @media only screen and (min-width: 768px) {
   #animated-title {
     font-size: 100px;
+    padding-top: 70px;
     letter-spacing: 5px;
     color: rgba(0, 255, 255, 1);
     text-shadow: 

@@ -97,10 +97,3 @@ menuLinks.forEach(link => {
   link.addEventListener('click', closeMenu); // Закриваємо меню при кліку
 });
 });
-
-
-
-
-
-
-
