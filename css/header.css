@@ -7,7 +7,7 @@
 } 
 .header-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   background-color: rgba(21, 19, 19, 0.966);
@@ -19,12 +19,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;   
+  margin-right: auto;
 }
 .header-logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 300px;
 }
 .header-logo-img {
   display: block; 
